@@ -908,11 +908,8 @@ void IVP_Real_Object::unlink_contact_points_for_object( IVP_Real_Object *other_o
             fr_mindist->get_synapse(1)->l_obj == other_object )
             fr_sys->delete_friction_distance(fr_mindist);
 
-        if( !fr_sys->friction_dist_number )
-        {
+        if(fr_sys->friction_dist_number==0)
             P_DELETE(fr_sys);
-            return;
-        }
     } while ( fr_synapse != NULL );
 }
 
