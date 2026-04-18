@@ -5,6 +5,10 @@
 #ifndef _IVP_U_TYPES_INCLUDED
 #define _IVP_U_TYPES_INCLUDED
 
+// TODO_ENHANCED: this is needed for not calling debug_clean_tmp_info
+#define NDEBUG
+#undef DEBUG
+
 #ifdef _LINUX
 	#include <signal.h>
 #endif
